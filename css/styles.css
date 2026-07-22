@@ -143,12 +143,12 @@ address {
 }
 
 .site-header.is-scrolled .site-nav--desktop a:not(.site-nav__cta) {
-  color: var(--color-steel-deep) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
 }
 
 .site-header.is-scrolled .site-nav--desktop a:not(.site-nav__cta):hover,
 .site-header.is-scrolled .site-nav--desktop a:not(.site-nav__cta):focus-visible {
-  color: var(--color-steel) !important;
+  color: #ffffff !important;
 }
 
 .site-header.is-scrolled .nav-toggle__bar {
@@ -241,15 +241,15 @@ address {
 }
 
 .site-header.is-scrolled .site-nav__cta {
-  border-color: rgba(31, 95, 139, 0.22);
-  background: rgba(31, 95, 139, 0.08);
-  color: var(--color-steel-deep) !important;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .site-header.is-scrolled .site-nav__cta:hover,
 .site-header.is-scrolled .site-nav__cta:focus-visible {
-  background: rgba(31, 95, 139, 0.14);
-  color: var(--color-steel) !important;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
 }
 
 .nav-toggle {
@@ -766,11 +766,37 @@ address {
   }
 
   .site-header.is-scrolled .site-nav--desktop .site-nav__list {
-    background: rgba(255, 255, 255, 0.72);
-    border-color: rgba(19, 32, 51, 0.1);
+    padding: 0.3rem 0.4rem;
+    background: rgba(12, 24, 38, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 0.55rem;
     box-shadow:
-      0 8px 24px rgba(19, 32, 51, 0.08),
-      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+      0 10px 28px rgba(8, 20, 35, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(18px) saturate(1.35);
+    -webkit-backdrop-filter: blur(18px) saturate(1.35);
+  }
+
+  .site-header.is-scrolled .site-nav--desktop a:not(.site-nav__cta) {
+    color: rgba(255, 255, 255, 0.92) !important;
+  }
+
+  .site-header.is-scrolled .site-nav--desktop a:not(.site-nav__cta):hover,
+  .site-header.is-scrolled .site-nav--desktop a:not(.site-nav__cta):focus-visible {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .site-header.is-scrolled .site-nav--desktop .site-nav__cta {
+    color: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .site-header.is-scrolled .site-nav--desktop .site-nav__cta:hover,
+  .site-header.is-scrolled .site-nav--desktop .site-nav__cta:focus-visible {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff !important;
   }
 
   .pillars {
