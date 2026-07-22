@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tifera">
+  <circle cx="32" cy="32" r="32" fill="#0F3D5C"/>
+  <!-- T bar -->
+  <rect x="15" y="17" width="34" height="7.5" rx="1.5" fill="#fff"/>
+  <!-- T stem -->
+  <rect x="28.25" y="17" width="7.5" height="31" rx="1.5" fill="#fff"/>
+  <!-- arrow -->
+  <path d="M39 30.5h7l-3.2-3.2 1.8-1.8L52 33.5l-7.4 7.4-1.8-1.8 3.2-3.2h-7v-4.9z" fill="#fff"/>
+</svg>
