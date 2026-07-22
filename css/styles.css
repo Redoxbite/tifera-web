@@ -142,8 +142,13 @@ address {
   color: var(--color-steel-deep);
 }
 
-.site-header.is-scrolled .site-nav a:not(.site-nav__cta) {
-  color: var(--color-ink-soft);
+.site-header.is-scrolled .site-nav--desktop a:not(.site-nav__cta) {
+  color: var(--color-steel-deep) !important;
+}
+
+.site-header.is-scrolled .site-nav--desktop a:not(.site-nav__cta):hover,
+.site-header.is-scrolled .site-nav--desktop a:not(.site-nav__cta):focus-visible {
+  color: var(--color-steel) !important;
 }
 
 .site-header.is-scrolled .nav-toggle__bar {
