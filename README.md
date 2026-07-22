@@ -1,10 +1,12 @@
-# Tifera website
+# Tifera
 
-Static site for GitHub Pages. Slovak copy from tifera.sk with a refreshed layout.
+Marketing website for TIFERA s. r. o.
 
 ## Live site
 
-After Pages is enabled: `https://redoxbite.github.io/tifera-web/`
+https://redoxbite.github.io/tifera-web/
+
+(When you connect `www.tifera.sk`, that will be the main address.)
 
 ## Local preview
 
