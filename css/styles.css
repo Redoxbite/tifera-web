@@ -117,8 +117,9 @@ address {
 .site-header {
   position: fixed;
   inset: 0 0 auto;
-  z-index: 100;
+  z-index: 130;
   height: var(--header-h);
+  overflow: visible;
   transition: background var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
 }
 
@@ -725,16 +726,29 @@ address {
   }
 }
 
-@media (min-width: 768px) {
+.site-nav--desktop {
+  display: none;
+}
+
+.site-nav--mobile {
+  display: none;
+}
+
+@media (min-width: 900px) {
   .nav-toggle {
     display: none;
   }
 
-  .site-nav {
+  .site-nav--desktop {
+    display: block;
     background: transparent;
   }
 
-  .site-nav__list {
+  .site-nav--mobile {
+    display: none !important;
+  }
+
+  .site-nav--desktop .site-nav__list {
     padding: 0.3rem 0.4rem;
     background: rgba(255, 255, 255, 0.14);
     border: 1px solid rgba(255, 255, 255, 0.28);
@@ -746,7 +760,7 @@ address {
     -webkit-backdrop-filter: blur(18px) saturate(1.35);
   }
 
-  .site-header.is-scrolled .site-nav__list {
+  .site-header.is-scrolled .site-nav--desktop .site-nav__list {
     background: rgba(255, 255, 255, 0.72);
     border-color: rgba(19, 32, 51, 0.1);
     box-shadow:
@@ -787,57 +801,85 @@ address {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 899px) {
   .nav-toggle {
     display: block;
-    z-index: 120;
+    position: relative;
+    z-index: 130;
   }
 
-  .site-nav {
+  .site-nav--desktop {
+    display: none !important;
+  }
+
+  .site-nav--mobile {
+    display: none;
     position: fixed;
     inset: 0;
-    z-index: 110;
-    display: grid;
-    align-content: center;
+    z-index: 120;
+    align-content: start;
     padding: calc(var(--header-h) + var(--space-md)) var(--space-lg) var(--space-xl);
-    background: rgba(247, 249, 251, 0.97);
-    backdrop-filter: blur(16px);
-    transform: translateX(100%);
-    opacity: 1;
-    pointer-events: none;
-    transition: transform 280ms var(--ease);
+    background: rgba(247, 249, 251, 0.96);
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: blur(18px) saturate(1.2);
+    -webkit-backdrop-filter: blur(18px) saturate(1.2);
   }
 
-  .site-nav.is-open {
-    transform: translateX(0);
-    pointer-events: auto;
+  .site-nav--mobile.is-open {
+    display: grid;
   }
 
-  .site-header .site-nav a:not(.site-nav__cta),
-  .site-header .site-nav__cta {
-    color: var(--color-steel-deep) !important;
-  }
-
-  .site-nav__list {
+  .site-nav--mobile .site-nav__list {
     flex-direction: column;
     align-items: stretch;
     gap: 0.35rem;
+    max-width: 28rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 
-  .site-nav a {
+  .site-nav--mobile a {
     font-family: var(--font-display);
     font-size: 1.45rem;
     font-weight: 700;
-    padding: 0.85rem 0.25rem;
+    padding: 0.95rem 0.25rem;
+    color: var(--color-steel-deep) !important;
     border-bottom: 1px solid var(--color-line);
+    border-radius: 0;
   }
 
-  .site-nav__cta {
+  .site-nav--mobile .site-nav__cta {
     margin: var(--space-md) 0 0;
     width: 100%;
     text-align: center;
+    padding: 0.9rem 1rem;
     border: 1px solid rgba(31, 95, 139, 0.35) !important;
     border-radius: var(--radius-sm);
+    background: rgba(31, 95, 139, 0.08);
+  }
+
+  .site-header.is-scrolled {
+    background: rgba(247, 249, 251, 0.96);
+    backdrop-filter: none;
+  }
+
+  body.is-nav-open .site-header {
+    background: rgba(247, 249, 251, 0.98);
+  }
+
+  body.is-nav-open .site-header .brand__name,
+  body.is-nav-open .site-header .nav-toggle__bar {
+    color: var(--color-steel-deep);
+  }
+
+  body.is-nav-open .site-header .nav-toggle__bar {
+    background: var(--color-steel-deep);
   }
 }
 
@@ -892,22 +934,24 @@ address {
     color: #d7e6f4;
   }
 
-  @media (max-width: 767px) {
-    .site-nav {
-      background: rgba(12, 18, 24, 0.98);
+  @media (max-width: 899px) {
+    .site-nav--mobile {
+      background: rgba(12, 18, 24, 0.96);
     }
 
-    .site-header .site-nav a:not(.site-nav__cta),
-    .site-header .site-nav__cta {
+    .site-nav--mobile a {
       color: #e8eef5 !important;
-    }
-
-    .site-nav a {
       border-bottom-color: rgba(232, 238, 245, 0.12);
     }
 
-    .site-nav__cta {
+    .site-nav--mobile .site-nav__cta {
       border-color: rgba(232, 238, 245, 0.28) !important;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(12, 18, 24, 0.96);
+      backdrop-filter: none;
     }
   }
 

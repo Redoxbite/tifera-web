@@ -1,7 +1,7 @@
 (() => {
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".site-nav");
+  const nav = document.querySelector("#site-nav");
   const year = document.querySelector("#year");
   const form = document.querySelector("#contact-form");
   const status = document.querySelector("#form-status");
@@ -23,6 +23,7 @@
     const setOpen = (open) => {
       toggle.setAttribute("aria-expanded", String(open));
       nav.classList.toggle("is-open", open);
+      nav.setAttribute("aria-hidden", String(!open));
       document.body.classList.toggle("is-nav-open", open);
     };
 
@@ -37,6 +38,12 @@
 
     window.addEventListener("keydown", (event) => {
       if (event.key === "Escape") setOpen(false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(min-width: 900px)").matches) {
+        setOpen(false);
+      }
     });
   }
 

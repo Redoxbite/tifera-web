@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=3">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
 </head>
 <body>
@@ -26,7 +26,7 @@
         <span class="nav-toggle__bar"></span>
       </button>
 
-      <nav class="site-nav" id="site-nav" aria-label="Hlavná navigácia">
+      <nav class="site-nav site-nav--desktop" id="site-nav-desktop" aria-label="Hlavná navigácia">
         <ul class="site-nav__list">
           <li><a href="#sluzby">Služby</a></li>
           <li><a href="#rnd">R&amp;D</a></li>
@@ -37,6 +37,16 @@
       </nav>
     </div>
   </header>
+
+  <nav class="site-nav site-nav--mobile" id="site-nav" aria-label="Mobilná navigácia" aria-hidden="true">
+    <ul class="site-nav__list">
+      <li><a href="#sluzby">Služby</a></li>
+      <li><a href="#rnd">R&amp;D</a></li>
+      <li><a href="#o-nas">O Nás</a></li>
+      <li><a href="#referencie">Referencie</a></li>
+      <li><a class="site-nav__cta" href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
@@ -246,6 +256,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
