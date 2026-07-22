@@ -953,6 +953,18 @@ address {
       background: rgba(12, 18, 24, 0.96);
       backdrop-filter: none;
     }
+
+    body.is-nav-open .site-header {
+      background: rgba(12, 18, 24, 0.98);
+    }
+
+    body.is-nav-open .site-header .brand__name {
+      color: #e8eef5;
+    }
+
+    body.is-nav-open .site-header .nav-toggle__bar {
+      background: #e8eef5;
+    }
   }
 
   .contact-form {
