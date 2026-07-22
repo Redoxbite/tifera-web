@@ -567,18 +567,19 @@ address {
 .logo-row__item {
   display: grid;
   place-items: center;
-  min-height: 5.5rem;
-  padding: var(--space-md);
-  border-top: 1px solid var(--color-line);
-  border-bottom: 1px solid var(--color-line);
+  min-height: 6.5rem;
+  padding: var(--space-md) var(--space-sm);
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
 }
 
-.logo-row__item span {
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--color-steel-deep);
-  text-align: center;
+.logo-row__item img {
+  width: auto;
+  max-width: 9.5rem;
+  max-height: 3.5rem;
+  object-fit: contain;
+  filter: none;
 }
 
 .contact {
@@ -960,9 +961,13 @@ address {
   }
 
   .brand__name,
-  .service h3,
-  .logo-row__item span {
+  .service h3 {
     color: #d7e6f4;
+  }
+
+  .logo-row__item {
+    background: #ffffff;
+    border-color: rgba(232, 238, 245, 0.18);
   }
 
   @media (max-width: 899px) {
