@@ -4,9 +4,9 @@ Marketing website for TIFERA s. r. o.
 
 ## Live site
 
-https://redoxbite.github.io/tifera-web/
+https://tinyurl.com/tifera-site
 
-(When you connect `www.tifera.sk`, that will be the main address.)
+When you are ready, point `www.tifera.sk` here for the final domain.
 
 ## Local preview
 
