@@ -171,6 +171,7 @@ address {
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
+  margin-left: 0.85rem;
 }
 
 .brand__logo {
