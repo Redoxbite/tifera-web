@@ -172,13 +172,25 @@ address {
   gap: 0.7rem;
 }
 
+.brand__logo {
+  display: block;
+  width: auto;
+  height: 2.65rem;
+  max-width: min(12.5rem, 52vw);
+  object-fit: contain;
+  background: transparent;
+}
+
+.brand--footer .brand__logo {
+  height: 2.25rem;
+}
+
 .brand__mark {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   object-fit: contain;
   background: transparent;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .brand__name {
