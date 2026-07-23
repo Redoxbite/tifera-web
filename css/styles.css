@@ -2,10 +2,10 @@
   --color-ink: #0e1c2c;
   --color-ink-soft: #3a4f66;
   --color-muted: #6d7f94;
-  --color-steel: #2f74ad;
-  --color-steel-deep: #0c3554;
-  --color-accent: #3d86c4;
-  --color-accent-soft: #a8c4de;
+  --color-steel: #5b7a96;
+  --color-steel-deep: #2f4a63;
+  --color-accent: #6b849c;
+  --color-accent-soft: #a8b8c8;
   --color-frost: #f0f4f8;
   --color-mist: #f6f8fb;
   --color-white: #ffffff;
@@ -385,15 +385,15 @@ address {
 }
 
 .btn--primary {
-  background: linear-gradient(180deg, #4f97d0 0%, var(--color-steel) 100%);
+  background: linear-gradient(180deg, #7a94ab 0%, #5b7a96 55%, #3f5d75 100%);
   color: #ffffff;
-  box-shadow: 0 8px 22px rgba(47, 116, 173, 0.28);
+  box-shadow: 0 8px 22px rgba(47, 74, 99, 0.28);
 }
 
 .btn--primary:hover,
 .btn--primary:focus-visible {
-  background: linear-gradient(180deg, #5ea3d8 0%, #3a82bb 100%);
-  box-shadow: 0 10px 26px rgba(47, 116, 173, 0.34);
+  background: linear-gradient(180deg, #8aa3b8 0%, #6b849c 55%, #4a6b84 100%);
+  box-shadow: 0 10px 26px rgba(47, 74, 99, 0.34);
 }
 
 .btn--ghost {
